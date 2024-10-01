@@ -1,0 +1,261 @@
+/* Стили для основного контейнера */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1f1c2c, #928DAB); /* Градиентный фон */
+  font-family: 'Roboto', sans-serif;
+  color: #ecf0f1; /* Светлый текст */
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Основной контейнер */
+.container {
+  text-align: center;
+  padding: 50px 20px;
+  max-width: 1000px;
+  position: relative;
+}
+
+/* Заголовок "Лучшая команда по арбитражу трафика" */
+.main-title {
+  font-size: 3.5em;
+  margin-bottom: 50px;
+  background: linear-gradient(45deg, #ff4081, #ffcc00); /* Яркий градиент для текста */
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-animation 6s ease infinite;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+/* Описание и кнопки */
+.description {
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Основные кнопки */
+a.button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background-color: #e67e22; /* Яркий оранжевый цвет кнопок */
+  color: #ecf0f1; /* Светлый текст для кнопок */
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.6); /* Яркая тень */
+  animation: pulse 1.5s infinite alternate;
+}
+
+a.button:hover {
+  transform: translateY(-10px);
+  background-color: #d35400; /* Темный оранжевый при наведении */
+  box-shadow: 0 10px 25px rgba(231, 76, 60, 0.9);
+}
+
+a.button.secondary {
+  background-color: #3498db; /* Ярко-синий для вторичных кнопок */
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.6);
+}
+
+a.button.secondary:hover {
+  transform: translateY(-10px);
+  background-color: #2980b9; /* Темный синий при наведении */
+  box-shadow: 0 10px 25px rgba(52, 152, 219, 0.9);
+}
+
+/* Эффект для текста */
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Разделы */
+.section {
+  margin: 50px 0;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffcc00; /* Яркий желтый цвет заголовков секций */
+}
+
+/* Эффект частиц */
+.particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.8); /* Яркие частицы */
+  border-radius: 50%;
+  animation: particle-animation 10s infinite ease-in-out;
+  animation-duration: calc(5s * var(--i));
+  top: calc(100% * var(--i));
+  left: calc(100% * var(--i));
+  opacity: 0.6;
+}
+
+@keyframes particle-animation {
+  0% {
+      transform: translateY(0) translateX(0);
+      opacity: 0.8;
+  }
+  100% {
+      transform: translateY(-100vh) translateX(calc(-50vw + 100%));
+      opacity: 0;
+  }
+}
+
+/* Текст помощи */
+.help-text {
+  margin-top: 20px;
+  font-size: 1.3em;
+  line-height: 1.8;
+  color: #ffc107; /* Яркий золотой цвет */
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  animation: fade-in 2s ease-in-out 1 forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+/* Анимация появления текста */
+@keyframes fade-in {
+  0% {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Эффект свечения кнопок */
+a.button:active {
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7), inset 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Стили для отдельных блоков */
+.section-1, .section-2, .section-3 {
+  background: rgba(41, 128, 185, 0.15); /* Полупрозрачный фон секций */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Анимация контейнеров */
+@keyframes slide-up {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.section-1, .section-2, .section-3 {
+  animation: slide-up 1.5s ease forwards;
+}
+
+.section-1 {
+  animation-delay: 0.5s;
+}
+
+.section-2 {
+  animation-delay: 1s;
+}
+
+.section-3 {
+  animation-delay: 1.5s;
+}
+
+/* Пульсирующий эффект для кнопок */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      box-shadow: 0 5px 15px rgba(231, 76, 60, 0.6);
+  }
+  100% {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(231, 76, 60, 0.9);
+  }
+}
+
+/* Стили для анимации загрузки */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+.loader-circle {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  background-color: #ffcc00; /* Яркий желтый цвет для загрузки */
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loader-circle:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.loader-circle:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader-circle:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-30px);
+  }
+}
+
+/* Стили для контента */
+.container {
+  display: none; /* Скрыть контент изначально */
+}
+
+/* Анимация появления контента */
+@keyframes fadeIn {
+  from {
+      opacity: 0; /* Прозрачность 0 */
+      transform: translateY(50px); /* Сдвиг вниз */
+  }
+  to {
+      opacity: 1; /* Прозрачность 1 */
+      transform: translateY(0); /* Сдвиг на место */
+  }
+}

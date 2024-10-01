@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лучшая команда по арбитражу трафика</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- Подключаем JS файл -->
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-circle"></div>
+        <div class="loader-circle"></div>
+    </div>
+
+    <div class="container"> <!-- Контейнер с классом container -->
+        <h1 class="main-title">Лучшая команда по арбитражу трафика</h1>
+
+        <div class="section section-1">
+            <p class="description">Мы — <strong>крупная тима</strong> по арбитражу трафика. <br>
+                У нас много <em>спонсоров</em>, и тебе нужно подписаться как на самих спонсоров, так и на наш
+                переходник, прежде чем отправить заявку в команду.</p>
+            <a href="https://t.me/+kKv88hLYunUxMmQy" class="button">Присоединиться к команде</a>
+        </div>
+
+        <div class="section section-2">
+            <h2>Мануал: Как использовать все разделы команды Reaper Traffic</h2>
+            <a href="https://t.me/trafficarbitragegwowbzt" class="button secondary">Открыть мануал</a>
+        </div>
+
+        <div class="section section-3">
+            <h2>Свяжись с нами</h2>
+            <a href="https://t.me/Braggsz" class="button secondary">Написать в ЛС</a>
+            <p class="help-text">
+                Я уверен, что у тебя 100% появятся вопросы. Не стесняйся обращаться, я всегда помогу разобраться и всё
+                объясню 😉.
+                С этого момента я твой личный помощник здесь, пока не обоснуешься в нашей команде!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Ждем 3 секунды перед тем, как скрыть загрузку и показать контент
+        setTimeout(function () {
+            document.querySelector('.loader').style.display = 'none'; // Скрываем загрузку
+            const content = document.querySelector('.container'); // Находим контейнер с контентом
+            content.style.display = 'block'; // Показываем контент
+            content.style.animation = 'fadeIn 0.5s forwards'; // Применяем анимацию появления
+        }, 3000);
+    </script>
+</body>
+
+</html>
