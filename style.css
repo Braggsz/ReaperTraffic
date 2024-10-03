@@ -353,3 +353,70 @@ img {
 
 
 
+/* Для мобильных устройств */
+@media screen and (max-width: 767px) {
+  .main-title {
+      font-size: 2.5em;
+  }
+
+  .description, .help-text {
+      font-size: 1em;
+  }
+
+  a.button, a.button.secondary {
+      padding: 10px 20px;
+      font-size: 1em;
+  }
+
+  h2 {
+      font-size: 1.8em;
+  }
+
+  .section {
+      padding: 20px;
+  }
+}
+
+
+
+
+
+
+.social-media {
+  display: flex;
+  justify-content: center; /* Центрируем значки по горизонтали */
+  margin-top: 20px; /* Отступ сверху */
+}
+
+.social-media a {
+  margin: 0 10px; /* Отступы между значками */
+  text-decoration: none; /* Убираем подчеркивание */
+  color: #000; /* Цвет значков */
+  font-size: 24px; /* Размер значков */
+  transition: color 0.3s; /* Анимация при наведении */
+}
+
+.social-media a:hover {
+  color: #0077ff; /* Цвет при наведении (измените на желаемый цвет) */
+}
+
+
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; /* Отступ сверху */
+}
+
+.social-media a {
+    margin: 0 15px; /* Отступы между иконками */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #ecf0f1; /* Светлый цвет иконок */
+    font-size: 40px; /* Размер иконок */
+    transition: transform 0.3s ease, color 0.3s ease; /* Плавные эффекты */
+}
+
+.social-media a:hover {
+    transform: scale(1.2); /* Увеличение при наведении */
+    color: #ffcc00; /* Яркий цвет при наведении */
+}
