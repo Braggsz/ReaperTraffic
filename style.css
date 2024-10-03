@@ -414,36 +414,33 @@ img {
 }
 
 .social-icon {
-  font-size: 40px; /* Размер иконок */
-  color: #ecf0f1; /* Цвет иконок */
+  font-size: 60px; /* Увеличиваем размер иконок */
+  color: #ecf0f1; /* Светлый цвет иконок */
   transition: transform 0.3s ease, color 0.3s ease; /* Плавные эффекты */
 }
 
 .social-icon:hover {
-  transform: scale(1.2); /* Увеличение при наведении */
-  color: #ffcc00; /* Цвет при наведении */
+  transform: scale(1.1); /* Увеличение при наведении */
+  color: #ffcc00; /* Яркий цвет при наведении */
 }
 
 /* Для мобильных устройств */
 @media screen and (max-width: 767px) {
   .social-icon {
-      font-size: 30px; /* Уменьшаем размер на мобильных устройствах */
+      font-size: 50px; /* Уменьшаем размер на мобильных устройствах */
   }
 }
 
 /* Для планшетов */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .social-icon {
-      font-size: 35px; /* Размер для планшетов */
+      font-size: 55px; /* Размер для планшетов */
   }
 }
 
 /* Для больших экранов (ноутбуки и десктопы) */
 @media screen and (min-width: 1024px) {
   .social-icon {
-      font-size: 40px; /* Размер для больших экранов */
+      font-size: 60px; /* Размер для больших экранов */
   }
 }
-
-
-
